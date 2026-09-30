@@ -1,0 +1,85 @@
+{
+  "data_source": "synthetic NSL-KDD-like traffic (n=30000)",
+  "n_train": 22500,
+  "n_test": 7500,
+  "best_model": "random_forest",
+  "accuracy": 0.9588,
+  "macro_f1": 0.9053006742710717,
+  "binary_roc_auc": 0.9550356746584171,
+  "supervised_binary": {
+    "detection_rate": 0.9125389187659213,
+    "false_alarm_rate": 0.0,
+    "precision": 1.0
+  },
+  "hybrid_binary": {
+    "detection_rate": 0.9153693744692896,
+    "false_alarm_rate": 0.028485001260398286,
+    "precision": 0.9662384224678817
+  },
+  "per_class": {
+    "dos": {
+      "precision": 1.0,
+      "recall": 0.951058201058201,
+      "f1-score": 0.9749152542372881,
+      "support": 2268.0
+    },
+    "normal": {
+      "precision": 0.9277362020579981,
+      "recall": 1.0,
+      "f1-score": 0.9625136479437099,
+      "support": 3967.0
+    },
+    "probe": {
+      "precision": 1.0,
+      "recall": 0.9503355704697987,
+      "f1-score": 0.9745354439091535,
+      "support": 745.0
+    },
+    "r2l": {
+      "precision": 1.0,
+      "recall": 0.7081081081081081,
+      "f1-score": 0.8291139240506329,
+      "support": 370.0
+    },
+    "u2r": {
+      "precision": 1.0,
+      "recall": 0.6466666666666666,
+      "f1-score": 0.7854251012145749,
+      "support": 150.0
+    }
+  },
+  "zero_day": [
+    {
+      "unseen_attack_family": "dos",
+      "test_samples": 2268,
+      "detected_by_supervised": 0.8721340388007055,
+      "detected_by_hybrid": 0.9016754850088183,
+      "false_alarm_supervised": 0.0,
+      "false_alarm_hybrid": 0.031257877489286615
+    },
+    {
+      "unseen_attack_family": "probe",
+      "test_samples": 745,
+      "detected_by_supervised": 0.05503355704697987,
+      "detected_by_hybrid": 0.9516778523489933,
+      "false_alarm_supervised": 0.0,
+      "false_alarm_hybrid": 0.032770355432316614
+    },
+    {
+      "unseen_attack_family": "r2l",
+      "test_samples": 370,
+      "detected_by_supervised": 0.24864864864864866,
+      "detected_by_hybrid": 0.37567567567567567,
+      "false_alarm_supervised": 0.0,
+      "false_alarm_hybrid": 0.028485001260398286
+    },
+    {
+      "unseen_attack_family": "u2r",
+      "test_samples": 150,
+      "detected_by_supervised": 0.19333333333333333,
+      "detected_by_hybrid": 0.4266666666666667,
+      "false_alarm_supervised": 0.0,
+      "false_alarm_hybrid": 0.028485001260398286
+    }
+  ]
+}
